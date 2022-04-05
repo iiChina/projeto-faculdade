@@ -9,18 +9,18 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="table table-divider table-striped table-sm table-bordered"">
     <tr>
-        <th>
+        <th class="text-center">
             @Html.DisplayNameFor(model => model.Descricao)
         </th>
-        <th>
+        <th class="text-center">
             @Html.DisplayNameFor(model => model.Faixa)
         </th>
-        <th>
+        <th class="text-center">
             @Html.DisplayNameFor(model => model.Sinopse)
         </th>
-        <th>
+        <th class="text-center">
             @Html.DisplayNameFor(model => model.Genero)
         </th>
         <th></th>
@@ -40,10 +40,10 @@
         <td>
             @Html.DisplayFor(modelItem => item.Genero)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        <td class="text-center">
+            <button type="button" class="btn btn-info">@Html.ActionLink("Edit", "Edit", new { id = item.Id })</button>
+            <button type="button" class="btn btn-warning">@Html.ActionLink("Details", "Details", new { id = item.Id })</button>
+            <button type="button" class="btn btn-danger">@Html.ActionLink("Delete", "Delete", new { id = item.Id })</button>
         </td>
     </tr>
 }
